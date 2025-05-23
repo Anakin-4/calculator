@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fef9f8;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+}
+
+.app {
+  background: #fff;
+  border: 2px solid #ffd6e0;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 320px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+  color: #ff5e78;
+  margin-bottom: 20px;
+}
+
+#display {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px;
+  border: 2px solid #ffd6e0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: #fff0f5;
+  text-align: right;
+  color: #ff5e78;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  background: #ffe6ea;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 0;
+  font-size: 16px;
+  color: #ff5e78;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #ffd6e0;
+  transform: scale(1.05);
+}
+
+button:active {
+  background: #ffb6c1;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  10% { transform: rotate(12deg) scale(1.05); }
+  20% { transform: rotate(-12deg) scale(1.05); }
+  30% { transform: rotate(10deg) scale(1.04); }
+  40% { transform: rotate(-10deg) scale(1.04); }
+  50% { transform: rotate(6deg) scale(1.03); }
+  60% { transform: rotate(-6deg) scale(1.03); }
+  70% { transform: rotate(3deg) scale(1.02); }
+  80% { transform: rotate(-3deg) scale(1.02); }
+  90% { transform: rotate(1deg) scale(1.01); }
+}
+
+.wiggle {
+  animation: wiggle 0.8s ease;
+}
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: floatUp 1.5s ease-out forwards;
+  opacity: 0.8;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px) scale(1.4) rotate(45deg);
+    opacity: 0;
+  }
+}

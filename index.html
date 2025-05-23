@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anakin;s calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <img src="giphy.webp" id="anakinGif" alt="sword" width="64" height="64" style="margin-bottom: 10px;"/>
+    <audio id="funnySound" src="WhatsApp Audio 2025-05-22 at 11.59.52 PM.aac"></audio>
+    <h1>Anakin;s calculator</h1>
+    <input type="text" id="display" disabled />
+    <div class="buttons">
+      <!-- Buttons will go here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(() => {
+      console.log('Service Worker Registered');
+    });
+  }
+</script>
+</body>
+</html>
